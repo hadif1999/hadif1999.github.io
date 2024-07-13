@@ -8,39 +8,36 @@ sidebar:
     education: True # set to False if you want education in main section instead of in sidebar
 
     # Profile information
-    name: Alan Doe
-    tagline: Full Stack Developer
-    avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+    name: Hadi Fathipour 
+    tagline: AI and Backend Developer
+    avatar: hadi_profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
-    email: hello@webjeda.com
-    phone: 012 345 6789
-    timezone: America/Cancun Timezone
+    email: hadifathi13781378@gmail.com
+    phone: +98 921 3824 152
+    timezone: Iran/Tehran Timezone
     citizenship:
-    website: blog.webjeda.com #do not add http://
-    linkedin: alandoe
-    xing: alandoe
-    github: sharu725
-    telegram: # add your nickname without '@' sign
-    gitlab:
-    bitbucket:
-    twitter: '@webjeda'
-    stack-overflow: # Number/Username, e.g. 123456/alandoe
-    codewars:
-    goodreads: # Number-Username, e.g. 123456-alandoe
-    pdf: http://www.africau.edu/images/default/sample.pdf
+      #website: blog.webjeda.com #do not add http://
+    linkedin: hadi-fathipour-8b39071a2 
+      #xing: alandoe
+    github: hadif1999
+    telegram: gray_hat_hadi
+      #gitlab:
+      #bitbucket:
+      #twitter: '@webjeda'
+      # stack-overflow: # Number/Username, e.g. 123456/alandoe
+      #codewars:
+      #goodreads: # Number-Username, e.g. 123456-alandoe
+      #pdf: http://www.africau.edu/images/default/sample.pdf
 
     languages:
       title: Languages
       info:
         - idiom: English
+          level: Professional
+
+        - idiom: Farsi 
           level: Native
-
-        - idiom: French
-          level: Professional
-
-        - idiom: Spanish
-          level: Professional
 
     interests:
       title: Interests
@@ -48,53 +45,52 @@ sidebar:
         - item: Climbing
           link:
 
-        - item: Snowboarding
+        - item: Watching movies 
           link:
 
-        - item: Cooking
+        - item: Driving 
           link:
 
 career-profile:
-    title: Career Profile
+    title: About
     summary: |
-      Summarise your career here lorem ipsum dolor sit amet, consectetuer
-      adipiscing elit. You can [download this free resume/CV template here]().
-      Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque
-      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu.
-      Second paragraph if required.
+      I’m a Enthusiastic, self-motivated and talented guy with some experience about 2+ years in fields
+      including Machine Learning, Backend development, Data Analysis.
+      I love to challenge my problem solving and creativity skills to find solutions for real world problems. I’m
+      eager to learn new things, also a fast learner and I think learning is one of the most important skills every
+      human borned to learn, and my mistakes are my biggest teachers.
+      I found my talent and interest in programming and interacting with data in college and that was where I
+      started from by writing scientific programs and embedded systems programming from that age.
+      I love to work with data, processing them, pulling meaningful results to make strategic decisions,
+      automating projects to run as stand-alone apps.
 education:
     title: Education
     info:
-      - degree: MSc in Computer Science
-        university: University of London
-        time: 2011 - 2012
-        details: |
-          Describe your study here lorem ipsum dolor sit amet, consectetuer
-          adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-          sociis natoque penatibus et magnis dis parturient montes, nascetur
-          ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-          pretium quis, sem.
-            - Bullet point
-            - Bullet point
-      - degree: BSc in Applied Mathematics
-        university: Bristol University
-        time: 2007 - 2011
-        details: |
-          Describe your study here lorem ipsum dolor sit amet, consectetuer
-          adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-          sociis natoque penatibus et magnis dis parturient montes, nascetur
-          ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-          pretium quis, sem.
+      - degree: MSc in Mechatronics Engineering (AI focus)
+        university: KNTU University of Technology
+
+        time: 2024 - now
+          #details: |
+          # - Bullet point
+          # - Bullet point
+      - degree: BSc in Aerospace Engineering
+        university: KNTU University of Technology
+        time: 2017 - 2021
+          #details: |
+          #Describe your study here lorem ipsum dolor sit amet, consectetuer
+          #adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+          #sociis natoque penatibus et magnis dis parturient montes, nascetur
+          #ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+          #pretium quis, sem.
             - Bullet point
             - Bullet point
 
 experiences:
     title: Experiences
     info:
-      - role: Lead Developer
+      - role: Freelance Developer
         time: 2015 - Present
-        company: Startup Hubs, San Francisco
+        company: Freelancing Websites and Social media (linkedin, etc), Worldwide
         details: |
           Describe your role here lorem ipsum dolor sit amet, consectetuer
           adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
@@ -261,5 +257,3 @@ skills:
       - name: Sketch & Photoshop
         level: 60%
 
-footer: >
-    Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
