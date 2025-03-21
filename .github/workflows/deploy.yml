@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      -  hadi
   schedule:
     - cron: "0 12 * * 1" # see https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
 jobs:
@@ -37,5 +37,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token : ${{ secrets.GITHUB_TOKEN }} # This is provided by GitHub.
-          branch: gh-pages # The branch the action should deploy to.
+          branch: master # The branch the action should deploy to.
           folder: build # The folder the action should deploy.
