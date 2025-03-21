@@ -71,7 +71,7 @@ https://fontawesome.com/icons?d=gallery */
     },
     {
       skillName: "Celery",
-      iconPath: "images/celeryLogo.png"
+      fontAwesomeClassname: "fa-solid fa-c"
     },
     {
       skillName: "sql-databases (postgres, mysql)",
@@ -83,11 +83,11 @@ https://fontawesome.com/icons?d=gallery */
     },
     {
       skillName: "FastAPI",
-      iconPath: "images/FastAPILogo.svg"
+      fontAwesomeClassname: "fa-solid fa-bolt-lightning"
     },
     {
       skillName: "Redis",
-      iconPath: "images/redisLogo.svg"
+      fontAwesomeClassname: "fa-solid fa-server"
     }
   ],
   display: true // Set false to hide this section, defaults to true
