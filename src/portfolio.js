@@ -70,7 +70,8 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-docker"
     },
     {
-      skillName: "Celery"
+      skillName: "Celery",
+      iconPath: "images/celeryLogo.png"
     },
     {
       skillName: "sql-databases (postgres, mysql)",
@@ -81,10 +82,12 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-linux"
     },
     {
-      skillName: "FastAPI"
+      skillName: "FastAPI",
+      iconPath: "images/FastAPILogo.svg"
     },
     {
-      skillName: "Redis"
+      skillName: "Redis",
+      iconPath: "images/redisLogo.svg"
     }
   ],
   display: true // Set false to hide this section, defaults to true
