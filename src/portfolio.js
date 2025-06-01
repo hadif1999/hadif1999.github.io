@@ -26,7 +26,7 @@ const greeting = {
     "A passionate Backend & ML Developer 🚀 having an experience of building High performance APIs and advanced AI applications with Python / Tensorflow / FastAPI / Docker and some other cool libraries and frameworks."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/14e25k1fAwWtpNblIl-CwTaJ4MwDpnoA9/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
