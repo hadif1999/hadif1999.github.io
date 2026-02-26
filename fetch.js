@@ -136,7 +136,25 @@ function writeFallbackBlogsData() {
 }
 
 async function fetchJson(url, options = {}) {
-  const response = await fetch(url, options);
+  const isGithubApiRequest =
+    typeof url === "string" && url.startsWith("https://api.github.com");
+  const isGithubPageRequest =
+    typeof url === "string" && url.startsWith("https://github.com");
+  const defaultHeaders = {};
+  if (isGithubApiRequest) {
+    defaultHeaders["User-Agent"] = "hadif1999-portfolio-fetch-script";
+    defaultHeaders.Accept = "application/vnd.github+json";
+  } else if (isGithubPageRequest) {
+    defaultHeaders["User-Agent"] = "hadif1999-portfolio-fetch-script";
+    defaultHeaders.Accept = "text/html";
+  }
+  const response = await fetch(url, {
+    ...options,
+    headers: {
+      ...defaultHeaders,
+      ...(options.headers || {})
+    }
+  });
   const raw = await response.text();
   let data = null;
   try {
@@ -229,7 +247,22 @@ async function fetchPinnedRepoNamesFromProfilePage() {
       names.push(match[1]);
     }
   }
-  return [...new Set(names)];
+
+  // Fallback parser for GitHub markup variants where list-item classes differ.
+  if (names.length === 0) {
+    const pinnedHydroRegex = new RegExp(
+      `target&quot;:&quot;PINNED_REPO&quot;[\\s\\S]{0,500}?href="/${escapedUser}/([^"/?#]+)"`,
+      "g"
+    );
+    const matches = [...html.matchAll(pinnedHydroRegex)];
+    for (const match of matches) {
+      if (match && match[1]) {
+        names.push(match[1]);
+      }
+    }
+  }
+
+  return [...new Set(names)].slice(0, 6);
 }
 
 async function fetchPinnedReposViaPublicApi() {
