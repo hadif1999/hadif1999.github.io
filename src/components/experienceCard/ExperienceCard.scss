@@ -2,155 +2,242 @@
 
 .experience-card {
   position: relative;
+  overflow: hidden;
   background-color: $lightBackground2;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
+  border-radius: 16px;
   border: 1px solid $lightBorder1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .experience-card-dark {
   position: relative;
+  overflow: hidden;
   background-color: $darkBackground;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
+  border-radius: 16px;
   border: 1px solid $lightBorder1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .experience-card:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  transform: translateY(-6px);
+  box-shadow: $lightBoxShadowDark 0px 24px 36px -12px;
+}
+
+.experience-card-dark:hover {
+  transform: translateY(-6px);
+  box-shadow: $lightBoxShadowDark 0px 24px 36px -12px;
 }
 
 .experience-banner {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 150%;
   background: $experienceCardBannerLG;
-  border-radius: 10px 10px 0px 0px;
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -o-filter: blur(0px);
-  -ms-filter: blur(0px);
-  filter: blur(0px);
-  height: 11rem;
+  border-radius: 16px 16px 0px 0px;
+  min-height: 132px;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.1rem 1.2rem;
 }
 
-.experience-blurred_div {
-  position: absolute;
-  background: $experienceCardBlurredDivLG;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-  height: 11rem;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-radius: 10px 10px 0px 0px;
-}
-
-.experience-div-company {
-  position: absolute;
-  background: transparent;
-  height: 9rem;
-  top: 0;
-  left: 0;
+.experience-company-meta {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.experience-text-company {
-  text-align: center;
-  padding: 1.5rem;
+.experience-company-label {
   margin: 0;
-  color: $lightBackground1;
-  font-size: 25px;
-  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.experience-logo-shell {
+  width: 68px;
+  height: 68px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.experience-logo-fallback {
+  color: #ffffff;
+  font-size: 1rem;
   font-weight: 700;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  letter-spacing: 0.04em;
 }
 
 .experience-roundedimg {
-  position: absolute;
-  object-fit: cover;
-  left: 0;
-  right: 0;
-  top: 7rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 8rem;
-  height: 8rem;
-  box-shadow: 0 0.5rem 1rem $lightBoxShadowDarker;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+}
+
+.experience-text-company {
+  padding: 0.35rem 0 0;
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 22ch;
+}
+
+.experience-text-details {
+  padding: 1.35rem 1.35rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1;
 }
 
 .experience-text-role {
-  text-align: center;
   color: $textColor;
   font-weight: 700;
-  font-size: 25px;
-  margin: 0px;
-  padding-top: 1.5rem;
-  line-height: normal;
+  font-size: 1.4rem;
+  margin: 0;
+  line-height: 1.3;
 }
+
 .dark-mode-text {
   color: $textColorDark !important;
 }
+
 .experience-text-date {
-  text-align: center;
-  color: $textColor;
-  font-size: 20px;
-  margin: 0px;
-  padding-top: 1rem;
+  color: $buttonColor;
+  font-size: 1.02rem;
+  margin: 0;
   font-weight: 600;
 }
 
 .experience-text-desc {
-  text-align: center;
+  text-align: left;
+  margin: 0;
+  line-height: 1.52;
+  color: $subTitle;
 }
 
-.experience-text-details {
-  padding: 1.5rem;
-  margin-top: 2rem;
+.experience-bullets {
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.58rem;
+}
+
+.experience-bullet {
+  margin: 0;
+  padding-left: 1.05rem;
+  line-height: 1.45;
+  position: relative;
+  text-align: left;
+}
+
+.experience-bullet::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $buttonColor;
+  position: absolute;
+  left: 0;
+  top: 0.48rem;
 }
 
 /* Media Query */
 
 @media (max-width: 1380px) {
-  .experience-text-role {
-    padding-top: 0.5rem;
-    font-size: 22px;
+  .experience-banner {
+    min-height: 122px;
+    padding: 1rem 1.05rem;
   }
+
   .experience-text-company {
-    font-size: 22px;
+    font-size: 1.35rem;
   }
+
+  .experience-text-role {
+    font-size: 1.24rem;
+  }
+
   .experience-text-date {
-    font-size: 18px;
+    font-size: 0.95rem;
   }
+}
+
+@media (max-width: 900px) {
+  .experience-logo-shell {
+    width: 62px;
+    height: 62px;
+  }
+
   .experience-roundedimg {
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 46px;
+    height: 46px;
+  }
+
+  .experience-text-details {
+    padding: 1.2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .experience-text-role {
-    font-size: 22px;
+  .experience-banner {
+    min-height: 114px;
   }
+
   .experience-text-company {
-    font-size: 22px;
+    font-size: 1.22rem;
+    max-width: 100%;
   }
+
+  .experience-text-role {
+    font-size: 1.15rem;
+  }
+
   .experience-text-date {
-    font-size: 18px;
+    font-size: 0.9rem;
   }
+
   .experience-text-desc {
-    font-size: 16px;
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-company-meta {
+    gap: 0.75rem;
+  }
+
+  .experience-logo-shell {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+  }
+
+  .experience-roundedimg {
+    width: 42px;
+    height: 42px;
+  }
+
+  .experience-text-details {
+    gap: 0.75rem;
+    padding: 1rem;
   }
 }
