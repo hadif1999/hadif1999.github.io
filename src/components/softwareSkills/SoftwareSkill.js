@@ -8,17 +8,35 @@ export default function SoftwareSkill() {
       ? skillsSection.skillCategories
       : [{title: "Skills", skills: skillsSection.softwareSkills || []}];
 
+  function resolveIconSrc(iconSrc) {
+    if (!iconSrc) {
+      return null;
+    }
+
+    if (typeof iconSrc === "string") {
+      return iconSrc;
+    }
+
+    // Support bundlers returning static assets as module objects.
+    if (typeof iconSrc === "object" && iconSrc.default) {
+      return iconSrc.default;
+    }
+
+    return null;
+  }
+
   function renderSkill(skill, skillIndex) {
+    const iconSrc = resolveIconSrc(skill.iconSrc);
     const skillInner = (
       <>
         <div
           className="skill-icon-wrapper"
           style={{"--skill-accent": skill.iconColor}}
         >
-          {skill.iconSrc ? (
+          {iconSrc ? (
             <img
               className="software-skill-image"
-              src={skill.iconSrc}
+              src={iconSrc}
               alt={`${skill.skillName} icon`}
             />
           ) : (

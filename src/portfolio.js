@@ -24,7 +24,7 @@ const greeting = {
   username: "Hadi Fathipour",
   title: "Hi, I'm Hadi",
   subTitle: emoji(
-    "A passionate Backend & ML Developer 🚀 having an experience of building High performance APIs and advanced AI applications with Python / Tensorflow / FastAPI / Docker and some other cool libraries and frameworks."
+    "Backend & AI Engineer 🚀 building scalable APIs, asynchronous backend systems, and production-grade intelligent services with Python, Django, FastAPI, Docker, and modern ML tooling."
   ),
   resumeLink: localResumeFile, // Replace src/assets/docs/resume.pdf to change resume file
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -34,7 +34,7 @@ const greeting = {
 
 const socialMediaLinks = {
   github: "https://github.com/hadif1999",
-  linkedin: "https://www.linkedin.com/in/hadifathipour",
+  linkedin: "https://www.linkedin.com/in/hadi-fathipour-8b39071a2",
   gmail: "hadifathi13781378@gmail.com",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
@@ -46,14 +46,16 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "What I do",
   subTitle:
-    "Enthusiastic and self-motivated developer, looking forward to solve real world problems with technology",
+    "Build backend and AI systems by turning complex domain requirements into reliable production services.",
   skills: [
-    emoji("⚡ Build scalable backend APIs and infrastructure with Python ecosystem"),
     emoji(
-      "⚡ Apply AI/ML and computer vision for intelligent products and automation"
+      "⚡ Build secure and scalable backend APIs with Django, Django REST Framework, FastAPI, AsyncIO, and SQL/Redis stacks"
     ),
     emoji(
-      "⚡ Design robotics-aware and IoT-aware systems with practical control engineering"
+      "⚡ Apply AI/ML methods (TensorFlow, transformers, forecasting and vision pipelines) to practical products and analytics"
+    ),
+    emoji(
+      "⚡ Engineer production-ready data pipelines and asynchronous services for reliable real-world AI applications"
     )
   ],
 
@@ -136,25 +138,6 @@ https://fontawesome.com/icons?d=gallery */
           link: "https://en.wikipedia.org/wiki/Internet_of_things"
         }
       ]
-    },
-    {
-      title: "Robotics",
-      skills: [
-        {
-          skillName: "Arduino",
-          fontAwesomeClassname: "fas fa-microchip",
-          iconSrc: require("./assets/images/arduinoLogo.svg"),
-          iconColor: "#00878f",
-          link: "https://www.arduino.cc/"
-        },
-        {
-          skillName: "Control Systems",
-          fontAwesomeClassname: "fas fa-sliders-h",
-          iconSrc: require("./assets/images/controlSystemsLogo.svg"),
-          iconColor: "#6366f1",
-          link: "https://en.wikipedia.org/wiki/Control_system"
-        }
-      ]
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -165,26 +148,26 @@ https://fontawesome.com/icons?d=gallery */
 const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
-    // {
-    //   schoolName: "KNTU University of Technology",
-    //   logo: require("./assets/images/kntuLogo.png"),
-    //   subHeader: "Master of Science in Computer Science",
-    //   duration: "September 2017 - April 2019",
-    //   desc: "Participated in the research of XXX and published 3 papers.",
-    //   descBullets: [
-    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    //   ]
-    // },
     {
       schoolName: "KNTU University of Technology",
       logo: require("./assets/images/kntuLogo.png"),
-      subHeader: "Bachelor of Science in Aerospace engineering",
-      duration: "2018 - April 2022",
-      desc: "Ranked top 10% in the program. Took courses about AI, system identification, control systems, embedded systems, software programming ...",
+      subHeader: "Master of Science in Computer Engineering (Artificial Intelligence)",
+      duration: "2026 - Present",
+      desc: "Graduate studies focused on AI engineering, machine learning systems, and intelligent backend service design.",
       descBullets: [
-        "Best Bachelor's degree final project among all students among country",
-        "Designed, simulated and implemented Controller PID, LQR systems on a Reaction wheel inverted pendulum, implemented by Arduino"
+        "Advanced focus on AI-driven software architecture and production-oriented ML systems",
+        "Research and implementation work around real-world intelligent services"
+      ]
+    },
+    {
+      schoolName: "KNTU University of Technology",
+      logo: require("./assets/images/kntuLogo.png"),
+      subHeader: "Bachelor of Engineering",
+      duration: "2017 - 2022",
+      desc: "Graduated with GPA 3.81. Strong foundation in control systems, embedded implementation, system identification, and software programming.",
+      descBullets: [
+        "Designed, simulated, and implemented PID and LQR control systems on a reaction-wheel inverted pendulum",
+        "Implemented hardware-in-the-loop experimentation with Arduino-based controllers"
       ]
     }
   ]
@@ -196,21 +179,20 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Backend/API Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      Stack: "Backend/API Design",
+      progressPercentage: "92%"
     },
     {
-      Stack:
-        "Devops (CI/CD pipelines, Scaling projects, system administration, unit testing)",
-      progressPercentage: "70%"
+      Stack: "Machine Learning and Applied AI",
+      progressPercentage: "82%"
     },
     {
-      Stack: "Programming",
-      progressPercentage: "90%"
+      Stack: "DevOps and Containerized Services",
+      progressPercentage: "78%"
     },
     {
-      Stack: "Machine learning",
-      progressPercentage: "60%"
+      Stack: "Robotics and Real-Time Systems",
+      progressPercentage: "74%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -219,29 +201,41 @@ const techStack = {
 // Work experience section
 
 const workExperiences = {
-  display: false, //Set it to true to show workExperiences Section
+  display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Freelance Backend developer",
-      company: "worldwide-remote",
-      companylogo: null,
-      date: "June 2020 – Present",
-      desc: "developing high performance APIs using FastAPI, Docker, Celery, sqlmodel, etc",
-      descBullets: []
+      role: "Backend and AI Developer",
+      company: "Sanam.pro (RobTK)",
+      companylogo: require("./assets/images/programmer.svg"),
+      date: "2025 - 2026",
+      desc: "Designed and implemented backend services for real-time drone command and telemetry management using FastAPI and Django.",
+      descBullets: [
+        "Built secure role-based authentication and administrative control systems",
+        "Implemented modular architecture across API, business logic, and data layers",
+        "Integrated MAVSDK and PyMAVLink for reliable real-time communication"
+      ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Freelance ML and Backend Engineer",
+      company: "Self-employed",
+      companylogo: require("./assets/images/programmer.svg"),
+      date: "2021 - Present",
+      desc: "Delivered end-to-end backend and ML solutions across NLP, analytics automation, and time-series systems.",
+      descBullets: [
+        "Designed RESTful APIs with Django and FastAPI for scalable business workflows",
+        "Deployed production-ready containerized backend services using Docker"
+      ]
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Algorithmic Trader and Systems Developer",
+      company: "Self-employed",
+      companylogo: require("./assets/images/programmer.svg"),
+      date: "2022 - Present",
+      desc: "Designed and deployed algorithmic trading systems and backend data pipelines for cryptocurrency markets.",
+      descBullets: [
+        "Built reliable unattended execution services with containerized deployments",
+        "Applied forecasting models (Transformers, RNNs, ARIMA) for strategy evaluation"
+      ]
     }
   ]
 };
@@ -257,34 +251,54 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Key Projects",
+  subtitle: "Selected backend and AI systems from recent work",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: null,
+      projectName: "Urban Drone Backend and AI Control System",
+      projectDesc:
+        "Backend services for autonomous drone behavior, restricted-zone compliance, and real-time monitoring with asynchronous architecture.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
+          name: "GitHub",
+          url: "https://github.com/hadif1999/pymavrest"
         }
-        //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: null,
+      projectName: "IFUND Prop-Trading Platform Backend",
+      projectDesc:
+        "Backend and infrastructure to manage trading challenge provisioning, user account isolation, and operations dashboards.",
+      footerLink: []
+    },
+    {
+      image: null,
+      projectName: "TONPAY Telegram Crypto Wallet",
+      projectDesc:
+        "Asynchronous wallet backend integrated with Telegram, supporting scalable data models and multi-wallet user architecture.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://nextu.se/"
+          name: "GitHub",
+          url: "https://github.com/hadif1999/tonpay"
+        }
+      ]
+    },
+    {
+      image: null,
+      projectName: "Pycoin Algorithmic Trading Framework",
+      projectDesc:
+        "Open-source framework for market data ingestion, technical analysis, and probabilistic trend modeling in crypto markets.",
+      footerLink: [
+        {
+          name: "GitHub",
+          url: "https://github.com/hadif1999/pycoin"
         }
       ]
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: true // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
@@ -382,7 +396,7 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+98-9218284877",
+  number: "+98 921 8284 877",
   email_address: "hadifathi13781378@gmail.com"
 };
 
