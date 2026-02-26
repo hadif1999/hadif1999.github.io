@@ -1,31 +1,107 @@
 @import "../../_globalColor";
 
 .dev-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
   padding-left: 0;
   list-style: none;
-  font-size: 3rem;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  text-align: center;
+  margin: 8px 0 0;
 }
 
 .software-skill-inline {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 150px;
+  margin: 0 auto;
 }
 
-.software-skill-inline > i {
-  color: $subTitle;
+.skill-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px;
+  text-decoration: none;
+  border-radius: 14px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.software-skill-inline > i:hover {
-  color: $skillsColor;
+.skill-link:hover {
+  transform: translateY(-3px);
+  background-color: rgba(108, 99, 255, 0.08);
 }
-.software-skill-inline > p {
+
+.skill-icon-wrapper {
+  --skill-accent: #6c63ff;
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.95), rgba(247, 247, 250, 0.92));
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-link:hover .skill-icon-wrapper {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16), 0 0 0 2px rgba(108, 99, 255, 0.28);
+}
+
+.software-skill-inline i {
+  font-size: 2.35rem;
+}
+
+.skill-link p {
   color: $subTitle;
-  font-size: 10px;
+  font-size: 0.74rem;
+  line-height: 1.25;
+  text-align: center;
+  margin: 0;
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.software-skill-inline > i:hover ~ p {
+
+.software-skill-image {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+}
+
+.skill-link:hover p {
   color: $skillsColor;
+}
+
+.dark-mode .skill-icon-wrapper {
+  background: linear-gradient(140deg, rgba(30, 36, 54, 0.95), rgba(20, 24, 38, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.dark-mode .skill-link:hover {
+  background-color: rgba(108, 99, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+  .dev-icons {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 12px;
+  }
+
+  .skill-icon-wrapper {
+    width: 62px;
+    height: 62px;
+    border-radius: 15px;
+  }
+
+  .software-skill-image {
+    width: 38px;
+    height: 38px;
+  }
+
+  .software-skill-inline i {
+    font-size: 2.1rem;
+  }
 }

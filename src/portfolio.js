@@ -63,31 +63,48 @@ https://fontawesome.com/icons?d=gallery */
   softwareSkills: [
     {
       skillName: "Python",
-      fontAwesomeClassname: "fab fa-python"
+      fontAwesomeClassname: "fab fa-python",
+      iconColor: "#3776ab",
+      link: "https://www.python.org/"
     },
     {
       skillName: "Docker",
-      fontAwesomeClassname: "fab fa-docker"
+      fontAwesomeClassname: "fab fa-docker",
+      iconColor: "#2496ed",
+      link: "https://hub.docker.com/"
     },
     {
       skillName: "Celery",
-      fontAwesomeClassname: "fa-solid fa-c"
+      fontAwesomeClassname: "fas fa-leaf",
+      iconSrc: require("./assets/images/celeryLogo.png"),
+      iconColor: "#37814a",
+      link: "https://docs.celeryq.dev/"
     },
     {
       skillName: "sql-databases (postgres, mysql)",
-      fontAwesomeClassname: "fas fa-database"
+      fontAwesomeClassname: "fas fa-database",
+      iconColor: "#336791",
+      link: "https://www.postgresql.org/"
     },
     {
       skillName: "Linux",
-      fontAwesomeClassname: "fab fa-linux"
+      fontAwesomeClassname: "fab fa-linux",
+      iconColor: "#fcc624",
+      link: "https://www.linux.org/"
     },
     {
       skillName: "FastAPI",
-      fontAwesomeClassname: "fa-solid fa-bolt-lightning"
+      fontAwesomeClassname: "fas fa-bolt",
+      iconSrc: "/FastAPILogo.svg",
+      iconColor: "#009688",
+      link: "https://fastapi.tiangolo.com/"
     },
     {
       skillName: "Redis",
-      fontAwesomeClassname: "fa-solid fa-server"
+      fontAwesomeClassname: "fas fa-server",
+      iconSrc: "/redisLogo.svg",
+      iconColor: "#dc382d",
+      link: "https://redis.io/"
     }
   ],
   display: true // Set false to hide this section, defaults to true
