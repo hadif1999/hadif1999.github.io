@@ -48,63 +48,113 @@ const skillsSection = {
   subTitle:
     "Enthusiastic and self-motivated developer, looking forward to solve real world problems with technology",
   skills: [
-    emoji("⚡ Develop high Performance APIs using FastAPI, SqlModel, etc"),
+    emoji("⚡ Build scalable backend APIs and infrastructure with Python ecosystem"),
     emoji(
-      "⚡ Implementing cool AI models in various fields such as timeseries, image processing, etc"
+      "⚡ Apply AI/ML and computer vision for intelligent products and automation"
     ),
     emoji(
-      "⚡ Integration of High performance infrastructures, CI/CD pipelines, using Docker, Ansible, Terraform, and much more"
+      "⚡ Design robotics-aware and IoT-aware systems with practical control engineering"
     )
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
 https://fontawesome.com/icons?d=gallery */
 
-  softwareSkills: [
+  skillCategories: [
     {
-      skillName: "Python",
-      fontAwesomeClassname: "fab fa-python",
-      iconColor: "#3776ab",
-      link: "https://www.python.org/"
+      title: "Backend",
+      skills: [
+        {
+          skillName: "Python",
+          fontAwesomeClassname: "fab fa-python",
+          iconColor: "#3776ab",
+          link: "https://www.python.org/"
+        },
+        {
+          skillName: "Docker",
+          fontAwesomeClassname: "fab fa-docker",
+          iconColor: "#2496ed",
+          link: "https://hub.docker.com/"
+        },
+        {
+          skillName: "Celery",
+          fontAwesomeClassname: "fas fa-leaf",
+          iconSrc: require("./assets/images/celeryLogo.png"),
+          iconColor: "#37814a",
+          link: "https://docs.celeryq.dev/"
+        },
+        {
+          skillName: "SQL Databases",
+          fontAwesomeClassname: "fas fa-database",
+          iconColor: "#336791",
+          link: "https://www.postgresql.org/"
+        },
+        {
+          skillName: "Linux",
+          fontAwesomeClassname: "fab fa-linux",
+          iconColor: "#fcc624",
+          link: "https://www.kernel.org/"
+        },
+        {
+          skillName: "FastAPI",
+          fontAwesomeClassname: "fas fa-bolt",
+          iconSrc: "/FastAPILogo.svg",
+          iconColor: "#009688",
+          link: "https://fastapi.tiangolo.com/"
+        },
+        {
+          skillName: "Redis",
+          fontAwesomeClassname: "fas fa-server",
+          iconSrc: "/redisLogo.svg",
+          iconColor: "#dc382d",
+          link: "https://redis.io/"
+        }
+      ]
     },
     {
-      skillName: "Docker",
-      fontAwesomeClassname: "fab fa-docker",
-      iconColor: "#2496ed",
-      link: "https://hub.docker.com/"
+      title: "Artificial Intelligence",
+      skills: [
+        {
+          skillName: "TensorFlow",
+          fontAwesomeClassname: "fas fa-brain",
+          iconSrc: require("./assets/images/tensorflowLogo.svg"),
+          iconColor: "#ff6f00",
+          link: "https://www.tensorflow.org/"
+        },
+        {
+          skillName: "OpenCV",
+          fontAwesomeClassname: "fas fa-eye",
+          iconSrc: require("./assets/images/opencvLogo.svg"),
+          iconColor: "#5c3ee8",
+          link: "https://opencv.org/"
+        },
+        {
+          skillName: "IoT",
+          fontAwesomeClassname: "fas fa-network-wired",
+          iconSrc: require("./assets/images/iotLogo.svg"),
+          iconColor: "#0ea5e9",
+          link: "https://en.wikipedia.org/wiki/Internet_of_things"
+        }
+      ]
     },
     {
-      skillName: "Celery",
-      fontAwesomeClassname: "fas fa-leaf",
-      iconSrc: require("./assets/images/celeryLogo.png"),
-      iconColor: "#37814a",
-      link: "https://docs.celeryq.dev/"
-    },
-    {
-      skillName: "sql-databases (postgres, mysql)",
-      fontAwesomeClassname: "fas fa-database",
-      iconColor: "#336791",
-      link: "https://www.postgresql.org/"
-    },
-    {
-      skillName: "Linux",
-      fontAwesomeClassname: "fab fa-linux",
-      iconColor: "#fcc624",
-      link: "https://www.linux.org/"
-    },
-    {
-      skillName: "FastAPI",
-      fontAwesomeClassname: "fas fa-bolt",
-      iconSrc: "/FastAPILogo.svg",
-      iconColor: "#009688",
-      link: "https://fastapi.tiangolo.com/"
-    },
-    {
-      skillName: "Redis",
-      fontAwesomeClassname: "fas fa-server",
-      iconSrc: "/redisLogo.svg",
-      iconColor: "#dc382d",
-      link: "https://redis.io/"
+      title: "Robotics",
+      skills: [
+        {
+          skillName: "Arduino",
+          fontAwesomeClassname: "fas fa-microchip",
+          iconSrc: require("./assets/images/arduinoLogo.svg"),
+          iconColor: "#00878f",
+          link: "https://www.arduino.cc/"
+        },
+        {
+          skillName: "Control Systems",
+          fontAwesomeClassname: "fas fa-sliders-h",
+          iconSrc: require("./assets/images/controlSystemsLogo.svg"),
+          iconColor: "#6366f1",
+          link: "https://en.wikipedia.org/wiki/Control_system"
+        }
+      ]
     }
   ],
   display: true // Set false to hide this section, defaults to true
