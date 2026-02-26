@@ -4,6 +4,7 @@
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import localResumeFile from "./assets/docs/resume.pdf";
 
 // Splash Screen
 
@@ -25,8 +26,7 @@ const greeting = {
   subTitle: emoji(
     "A passionate Backend & ML Developer 🚀 having an experience of building High performance APIs and advanced AI applications with Python / Tensorflow / FastAPI / Docker and some other cool libraries and frameworks."
   ),
-  resumeLink:
-    "https://drive.google.com/file/d/14e25k1fAwWtpNblIl-CwTaJ4MwDpnoA9/view?usp=sharing", // Set to empty to hide the button
+  resumeLink: localResumeFile, // Replace src/assets/docs/resume.pdf to change resume file
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 

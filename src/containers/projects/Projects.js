@@ -14,6 +14,14 @@ export default function Projects() {
   // todo: remove useContex because is not supported
   const {isDark} = useContext(StyleContext);
 
+  function sortReposByCreatedAt(edges) {
+    return [...edges].sort((a, b) => {
+      const aDate = new Date(a?.node?.createdAt || 0).getTime();
+      const bDate = new Date(b?.node?.createdAt || 0).getTime();
+      return bDate - aDate;
+    });
+  }
+
   useEffect(() => {
     const getRepoData = () => {
       fetch("/profile.json")
@@ -24,7 +32,8 @@ export default function Projects() {
           throw result;
         })
         .then(response => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
+          const edges = response?.data?.user?.pinnedItems?.edges || [];
+          setrepoFunction(sortReposByCreatedAt(edges));
         })
         .catch(function (error) {
           console.error(
