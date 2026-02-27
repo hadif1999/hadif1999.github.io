@@ -24,21 +24,23 @@ export default function Talks() {
           >
             {talkSection.subtitle}
           </p>
-          {talkSection.talks.map((talk, i) => {
-            return (
-              <TalkCard
-                key={i}
-                talkDetails={{
-                  title: talk.title,
-                  subtitle: talk.subtitle,
-                  slides_url: talk.slides_url,
-                  event_url: talk.event_url,
-                  image: talk.image,
-                  isDark
-                }}
-              />
-            );
-          })}
+          <div className="talk-cards-div">
+            {talkSection.talks.map((talk, i) => {
+              return (
+                <TalkCard
+                  key={i}
+                  talkDetails={{
+                    title: talk.title,
+                    subtitle: talk.subtitle,
+                    slides_url: talk.slides_url,
+                    event_url: talk.event_url,
+                    image: talk.image,
+                    isDark
+                  }}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </Fade>

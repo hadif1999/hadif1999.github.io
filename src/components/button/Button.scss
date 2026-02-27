@@ -6,6 +6,7 @@
   color: $textColorDark;
   font-weight: 700;
   width: max-content;
+  max-width: 100%;
   padding: 13px 22px;
   margin-right: 50px;
   text-transform: uppercase;
@@ -15,6 +16,7 @@
   display: block;
   margin-top: 20px;
   font-size: 1rem;
+  line-height: 1.35;
   cursor: pointer;
   transition: all 0.3s ease-in-out 0s;
 }

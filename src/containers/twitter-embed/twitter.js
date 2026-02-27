@@ -16,7 +16,7 @@ function timeOut() {
     }
   }, 10000);
 }
-var widthScreen = window.screen.width;
+const timelineWidth = Math.max(260, Math.min(window.innerWidth - 32, 560));
 
 export default function Twitter() {
   const {isDark} = useContext(StyleContext);
@@ -35,14 +35,14 @@ export default function Twitter() {
             <TwitterTimelineEmbed
               sourceType="profile"
               screenName={twitterDetails.userName}
-              options={{height: 400, width: {widthScreen}}}
+              options={{height: 400, width: timelineWidth}}
               placeholder={renderLoader()}
               autoHeight={false}
               borderColor="#fff"
               key={isDark ? "1" : "2"}
               theme={isDark ? "dark" : "light"}
               noFooter={true}
-              onload={timeOut()}
+              onLoad={timeOut}
             />
           </div>
         </div>

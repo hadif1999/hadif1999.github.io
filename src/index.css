@@ -16,6 +16,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
 html,
 body {
   scroll-behavior: smooth;
@@ -25,12 +43,13 @@ body {
   font: 19px / 23px Montserrat, "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 /* Media Query */
 @media (max-width: 1380px) {
   html,
   body {
-    font-size: rem;
+    font-size: 100%;
     line-height: normal;
   }
 }

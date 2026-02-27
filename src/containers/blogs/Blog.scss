@@ -2,7 +2,7 @@
 @import "../../_globalColor";
 
 .square {
-  width: 440px;
+  width: min(100%, 440px);
   height: 430px;
   background: $textColorDark;
   border-radius: 4px;
@@ -38,7 +38,7 @@
 }
 .blog-text-div {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
   gap: 32px;
 }
 .subTitle {
@@ -61,10 +61,13 @@
     line-height: normal;
     text-align: center;
   }
+  .blog-text-div {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  }
 }
 
 @media screen and (max-width: 480px) and (min-width: 300px) {
   .blog-text-div {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
   }
 }
