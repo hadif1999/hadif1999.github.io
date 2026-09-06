@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="IoT logo">
+  <defs>
+    <linearGradient id="iotg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00BCD4"/>
+      <stop offset="1" stop-color="#0077C2"/>
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="116" height="116" rx="24" fill="#0f172a"/>
+  <g fill="none" stroke="url(#iotg)" stroke-width="6" stroke-linecap="round">
+    <path d="M64 24v22"/>
+    <path d="M64 82v22"/>
+    <path d="M24 64h22"/>
+    <path d="M82 64h22"/>
+    <path d="M38 38l15 15"/>
+    <path d="M75 75l15 15"/>
+    <path d="M90 38L75 53"/>
+    <path d="M38 90l15-15"/>
+  </g>
+  <circle cx="64" cy="64" r="18" fill="#00BCD4"/>
+  <circle cx="64" cy="24" r="7" fill="#22D3EE"/>
+  <circle cx="64" cy="104" r="7" fill="#22D3EE"/>
+  <circle cx="24" cy="64" r="7" fill="#22D3EE"/>
+  <circle cx="104" cy="64" r="7" fill="#22D3EE"/>
+  <circle cx="38" cy="38" r="6" fill="#38BDF8"/>
+  <circle cx="90" cy="38" r="6" fill="#38BDF8"/>
+  <circle cx="38" cy="90" r="6" fill="#38BDF8"/>
+  <circle cx="90" cy="90" r="6" fill="#38BDF8"/>
+</svg>
